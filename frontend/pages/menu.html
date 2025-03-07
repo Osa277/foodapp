@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bubble's Food Place</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <div>
+            <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Our Menu</h1>
+        <div class="menu-container">
+            <!-- Menu items here -->
+            <section class="menu">
+                <div class="menu-category" onclick="toggleMenu('starters')">
+                    <h2>Starters</h2>
+                    <div id="starters" class="menu-items">
+                        <div class="menu-item">
+                            <input type="radio" name="starter" id="garlic-bread" value="Garlic Bread">
+                            <label for="garlic-bread"><span class="dish">Garlic Bread</span> <span class="price">$5.99</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="starter" id="bruschetta" value="Bruschetta">
+                            <label for="bruschetta"><span class="dish">Bruschetta</span> <span class="price">$6.99</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="starter" id="stuffed-mushrooms" value="Stuffed Mushrooms">
+                            <label for="stuffed-mushrooms"><span class="dish">Stuffed Mushrooms</span> <span class="price">$7.49</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category" onclick="toggleMenu('main-course')">
+                    <h2>Main Course</h2>
+                    <div id="main-course" class="menu-items">
+                        <div class="menu-item">
+                            <input type="radio" name="main-course" id="grilled-salmon" value="Grilled Salmon">
+                            <label for="grilled-salmon"><span class="dish">Grilled Salmon</span> <span class="price">$18.99</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="main-course" id="ribeye-steak" value="Ribeye Steak">
+                            <label for="ribeye-steak"><span class="dish">Ribeye Steak</span> <span class="price">$22.99</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="main-course" id="pasta-alfredo" value="Pasta Alfredo">
+                            <label for="pasta-alfredo"><span class="dish">Pasta Alfredo</span> <span class="price">$14.99</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category" onclick="toggleMenu('desserts')">
+                    <h2>Desserts</h2>
+                    <div id="desserts" class="menu-items">
+                        <div class="menu-item">
+                            <input type="radio" name="dessert" id="cheesecake" value="Cheesecake">
+                            <label for="cheesecake"><span class="dish">Cheesecake</span> <span class="price">$6.99</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="dessert" id="chocolate-lava-cake" value="Chocolate Lava Cake">
+                            <label for="chocolate-lava-cake"><span class="dish">Chocolate Lava Cake</span> <span class="price">$7.49</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="dessert" id="tiramisu" value="Tiramisu">
+                            <label for="tiramisu"><span class="dish">Tiramisu</span> <span class="price">$6.99</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category" onclick="toggleMenu('beverages')">
+                    <h2>Beverages</h2>
+                    <div id="beverages" class="menu-items">
+                        <div class="menu-item">
+                            <input type="radio" name="beverage" id="fresh-lemonade" value="Fresh Lemonade">
+                            <label for="fresh-lemonade"><span class="dish">Fresh Lemonade</span> <span class="price">$3.99</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="beverage" id="iced-coffee" value="Iced Coffee">
+                            <label for="iced-coffee"><span class="dish">Iced Coffee</span> <span class="price">$4.49</span></label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="radio" name="beverage" id="mojito" value="Mojito">
+                            <label for="mojito"><span class="dish">Mojito</span> <span class="price">$5.99</span></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <button id="add-to-order" class="btn">Add to Order</button>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Food Restaurant | <a href="#">Privacy Policy</a></p>
+    </footer>
+    <script src="../js/menu.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

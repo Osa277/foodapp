@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Bubble's Food Place</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Checkout</h1>
+
+        <!-- <div id="order-summary"></div> -->
+
+        <div id="order-summary"></div>
+          <h3>Total: <span id="total-price">$0.00</span></h3>
+
+          
+          <form id="checkout-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+        
+            <label for="address">Address</label>
+            <input type="text" id="address" required>
+        
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" required>
+        
+            <button type="submit" id="proceed-to-payment">Proceed to Payment</button>
+        </form>
+        
+        <script>
+        document.getElementById("checkout-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+        
+            // Get user details
+            const name = document.getElementById("name").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+        
+            if (!name || !address || !phone) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+        
+            // Save checkout details to localStorage
+            const orderDetails = { name, address, phone };
+            localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+        
+            // Redirect to payment page
+            window.location.href = "payment.html";
+        });
+        </script>
+        
+    </main>
+
+    
+
+    <footer class="footer">
+        <p>© 2025 Food Restaurant | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

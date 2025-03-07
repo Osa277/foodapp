@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Bubble's Food Place</title>
+    <link rel="stylesheet" href="../css/order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            
+        </ul>
+        <div>
+            <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Place Your Order</h1>
+        <div class="order-container">
+            <form class="order-form">
+                <h2>Order Details</h2>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="food-item">Food Item</label>
+                <select id="food-item" name="food-item" required>
+                    <option value="burger">Cheese Burger</option>
+                    <option value="pizza">Margherita Pizza</option>
+                    <option value="pasta">Creamy Pasta</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Food Restaurant | <a href="#">Privacy Policy</a></p>
+    </footer>
+    <script src="../js/order.js"></script>
+</body>
+</html>

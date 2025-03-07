@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Bubble's Food Place</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <div>
+            <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cart-container"></div>
+       <button id="checkout-button" class="btn">Proceed to Checkout</button>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Food Restaurant | <a href="#">Privacy Policy</a></p>
+    </footer>
+    <script src="../js/cart.js"></script>
+</body>
+</html>
